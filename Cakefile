@@ -23,7 +23,7 @@ compile = (includeTests, cb) ->
     
 task 'clean', 'clean lib folder', ->
   console.log 'Cleaning'
-  if path.existsSync 'lib'
+  if fs.existsSync 'lib'
     for file in fs.readdirSync 'lib'
       fs.unlinkSync path.join('lib', file) 
     fs.rmdirSync 'lib'
